@@ -4,16 +4,18 @@ def miroir(m) :
     else :
         return miroir(m[1:]) + m[0]
 
-#https://open.kattis.com/problems/filip
+def filip(str1,str2) :
+    """
+    https://open.kattis.com/problems/filip
+    """
+    nb1 = miroir(str1)
+    nb2 = miroir(str2)
+    
+    res = ""
 
-x = input()
-
-str1, str2 = x.split()
-
-nb1 = int(miroir(str1))
-nb2 = int(miroir(str2))
-
-if nb1 > nb2 :
-    print(nb1)
-else : 
-    print(nb2)
+    if nb1 > nb2 :
+        res = nb1
+    else : 
+        res = nb2
+        
+    return res

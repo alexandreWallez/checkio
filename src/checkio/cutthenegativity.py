@@ -13,6 +13,6 @@ def cutthenegativity(nb,table) :
         for i in range (nb) :
             if (int(lst[i]) >= 1) :
                 count += 1
-                str += f"{k} {i+1} {lst[i]} \n"
+                str += f"{k+1} {i+1} {lst[i]}\n"
     result += f"{count}\n" + str
     return result

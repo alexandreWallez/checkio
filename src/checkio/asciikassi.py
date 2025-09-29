@@ -11,4 +11,4 @@ def asciikassi(nb) :
 
     str += "+" + "-" *nb + "+"
 
-    print(str)
+    return str

@@ -11,4 +11,4 @@ def thendaysofchristmas(N):
         nb_gift_current = int(k*(k+1)/2)
         nb_gift += nb_gift_current
 
-    return ((nb_gift_current,nb_gift))
+    return (nb_gift_current,nb_gift)
