@@ -1,7 +1,7 @@
 [project]
 name = "checkio"
 version = "0.1.0"
-description = "first step with poetry"
+description = "first step with poetry "
 authors = [
     {name = "alexandre.wallez",email = "alexandre.wallez.etu@univ-lille.fr"}
 ]
