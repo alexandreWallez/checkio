@@ -6,6 +6,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    
+    permissions:
+       contents: write
+       
     steps:
 
       - uses: actions/checkout@v4
@@ -25,3 +29,12 @@ jobs:
           poetry run pytest tests/
           poetry run coverage run -m pytest
           poetry run coverage report -m
+          
+      - uses: tj-actions/coverage-badge-py@v2
+
+      - run: |
+          git add coverage.svg
+          git commit -m "Update coverage badge [bot]" 
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
