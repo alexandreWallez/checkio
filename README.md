@@ -1,1 +1,2 @@
-coveage : ![coverage badge](./coverage.svg)
+coverage : ![coverage badge](./coverage.svg)
+
