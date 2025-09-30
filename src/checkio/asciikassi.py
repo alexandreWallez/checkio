@@ -1,14 +1,21 @@
+"""Resolution of https://open.kattis.com/problems/asciikassi """
+
 def asciikassi(nb) :
+    """Resolution of https://open.kattis.com/problems/asciikassi 
+
+    Args:
+        nb (int): the interior sidelength of the square.
+
+    Returns:
+        String : a square of size NxN. 
     """
-    https://open.kattis.com/problems/asciikassi
-    """
-    str = ""
+    res = ""
 
-    str += "+" + "-" *nb + "+" + "\n"
+    res += "+" + "-" *nb + "+" + "\n"
 
-    for k in range (nb) :
-        str += "|" + " " * nb + "|" + "\n"
+    for _ in range (nb) :
+        res += "|" + " " * nb + "|" + "\n"
 
-    str += "+" + "-" *nb + "+"
+    res += "+" + "-" *nb + "+"
 
-    return str
+    return res

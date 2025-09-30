@@ -1,21 +1,36 @@
+"""Resolution of https://open.kattis.com/problems/filip"""
+
 def miroir(m) :
-    if len(m) == 0 :
-        return ""
-    else :
-        return miroir(m[1:]) + m[0]
+    """Reverse a string 
+
+    Args:
+        m (String): the string to reverse
+
+    Returns:
+        String : reversed string
+    """
+    res = ""
+    if len(m) != 0 :
+        res = miroir(m[1:]) + m[0]
+    return res
 
 def filip(str1,str2) :
-    """
-    https://open.kattis.com/problems/filip
+    """Resolution of https://open.kattis.com/problems/filip
+
+    Args:
+        str1 (String): first string to compare
+        str2 (String): second string to compare
+
+    Returns:
+        String : The output should contain the larger of the numbers in the input
     """
     nb1 = miroir(str1)
     nb2 = miroir(str2)
-    
     res = ""
 
     if nb1 > nb2 :
         res = nb1
-    else : 
+    else :
         res = nb2
-        
+
     return res

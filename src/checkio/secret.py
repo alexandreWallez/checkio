@@ -1,37 +1,44 @@
+"""Resolution of https://open.kattis.com/problems/secretmessage"""
+
 import math
 
 def secret(nb,all_message) :
+    """Resolution of https://open.kattis.com/problems/secretmessage
+
+    Args:
+        nb (Integer): number of original message
+        all_message (Array of String): array of original message
+
+    Returns:
+        String : For each original message, output the secret message
     """
-    https://open.kattis.com/problems/secretmessage
-    """
-    
+
     all_new_message = []
 
     for i in range(nb) :
-        
+
         message = all_message[i]
-        L = len(message)
-        
-        if int(math.sqrt(L))*int(math.sqrt(L)) == L :
-            K = int(math.sqrt(L))
+        l = len(message)
+
+        if int(math.sqrt(l))*int(math.sqrt(l)) == l :
+            k = int(math.sqrt(l))
         else :
-            K = math.floor(math.sqrt(L))+1
-            
-        M = K*K
-        
-        for j in range(M-L) :
+            k = math.floor(math.sqrt(l))+1
+
+        m = k*k
+
+        for _ in range(m-l) :
             message+="*"
         lst = list(message)
-        lst = [lst[r*K:(r+1)*K] for r in range(K)]
-        lst_rotated = [[lst[K-1-c][r] for c in range(K)] for r in range(K)]
+        lst = [lst[r*k:(r+1)*k] for r in range(k)]
+        lst_rotated = [[lst[k-1-c][r] for c in range(k)] for r in range(k)]
         new_message = ""
-            
-        for o in range(K) :
-            for l in range(K) :
+
+        for o in range(k) :
+            for l in range(k) :
                 if lst_rotated[o][l] != "*" :
                     new_message += lst_rotated[o][l]
-                    
-        all_new_message.append(new_message)
-            
-    return all_new_message    
 
+        all_new_message.append(new_message)
+
+    return all_new_message

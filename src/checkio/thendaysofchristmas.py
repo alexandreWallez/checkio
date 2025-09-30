@@ -1,13 +1,22 @@
-def thendaysofchristmas(N):
-    """
-    1 <= N <= 366
-    https://open.kattis.com/problems/thendaysofchristmas
+"""Resolution of https://open.kattis.com/problems/thendaysofchristmas"""
+
+def thendaysofchristmas(n):
+    """Resolution of https://open.kattis.com/problems/thendaysofchristmas
+
+    Args:
+        n (Integer): The input consists of a single integer, N,
+        the number of days of Christmas (1<=N<=366)
+
+    Returns:
+        (Integer,Integer): the first contains the number of gifts you receive 
+        on the Nth day, and the second contains the total number of gifts 
+        you have received by the end of the Nth day.
     """
 
     nb_gift_current = 0
     nb_gift = 0
 
-    for k in range(N+1) :
+    for k in range(n+1) :
         nb_gift_current = int(k*(k+1)/2)
         nb_gift += nb_gift_current
 

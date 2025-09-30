@@ -1,16 +1,24 @@
+"""Resolution of https://open.kattis.com/problems/spavanac"""
+
 def spavanac(x,y):
+    """Resolution of https://open.kattis.com/problems/spavanac
+
+    Args:
+        x (Integer): the hours
+        y (Integer): the minutes
+
+    Returns:
+        (Integer,Integer): the time 45 minutes before input time.
     """
-    https://open.kattis.com/problems/spavanac
-    """
-    
+
     res = (0,0)
-    
+
     if y < 45 :
         if x == 0 :
             res = (23,60-(45-y))
         else :
-           res = (x-1,60-(45-y))
+            res = (x-1,60-(45-y))
     else :
         res = (x,y-45)
-        
+
     return res
