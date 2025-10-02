@@ -1,5 +1,12 @@
 """Resolution of https://open.kattis.com/problems/asciikassi """
 
+import marimo
+
+__generated_with = "0.16.4"
+app = marimo.App(width="medium")
+
+
+@app.function
 def asciikassi(nb) :
     """Resolution of https://open.kattis.com/problems/asciikassi 
 
@@ -19,3 +26,8 @@ def asciikassi(nb) :
     res += "+" + "-" *nb + "+"
 
     return res
+
+
+@app.cell
+def _():
+    print(asciikassi(2))
