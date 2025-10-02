@@ -1,7 +1,12 @@
 """Resolution of https://open.kattis.com/problems/secretmessage"""
 
 import math
+import marimo
 
+app = marimo.App(width="medium")
+
+
+@app.function
 def secret(nb,all_message) :
     """Resolution of https://open.kattis.com/problems/secretmessage
 
@@ -42,3 +47,7 @@ def secret(nb,all_message) :
         all_new_message.append(new_message)
 
     return all_new_message
+
+@app.cell
+def _():
+    print(secret(2,["iloveyoutooJill","TheContestisOver"]))

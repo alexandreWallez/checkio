@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/spavanac"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def spavanac(x,y):
     """Resolution of https://open.kattis.com/problems/spavanac
 
@@ -22,3 +28,8 @@ def spavanac(x,y):
         res = (x,y-45)
 
     return res
+
+@app.cell
+def _():
+    print(spavanac(17,20))
+    print(spavanac(0,10))

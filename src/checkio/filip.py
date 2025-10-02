@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/filip"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def miroir(m) :
     """Reverse a string 
 
@@ -34,3 +40,8 @@ def filip(str1,str2) :
         res = nb2
 
     return res
+
+@app.cell
+def _():
+    print(filip("734", "893"))
+    print(filip("221", "231"))

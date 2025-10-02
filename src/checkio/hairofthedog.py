@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/hairofthedog"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def hairofthedog(a,lst) :
     """Resolution of https://open.kattis.com/problems/hairofthedog
 
@@ -20,3 +26,8 @@ def hairofthedog(a,lst) :
             res += 1
         temp = actual
     return res
+
+@app.cell
+def _():
+    print(hairofthedog(5,["sober","drunk","drunk","sober","sober"]))
+    print(hairofthedog(5,["sober","drunk","sober","drunk","sober"]))

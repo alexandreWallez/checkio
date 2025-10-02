@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/whichisgreater"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def whichisgreater(x,y) :
     """Resolution of https://open.kattis.com/problems/whichisgreater
 
@@ -13,3 +19,8 @@ def whichisgreater(x,y) :
     if x <= y :
         return 0
     return 1
+
+@app.cell
+def _():
+    print(whichisgreater(17,2))
+    print(whichisgreater(4,288729948))

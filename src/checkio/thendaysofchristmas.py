@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/thendaysofchristmas"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def thendaysofchristmas(n):
     """Resolution of https://open.kattis.com/problems/thendaysofchristmas
 
@@ -21,3 +27,8 @@ def thendaysofchristmas(n):
         nb_gift += nb_gift_current
 
     return (nb_gift_current,nb_gift)
+
+@app.cell
+def _():
+    print(thendaysofchristmas(2))
+    print(thendaysofchristmas(17))

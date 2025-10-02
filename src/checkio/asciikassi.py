@@ -30,3 +30,4 @@ def asciikassi(nb) :
 @app.cell
 def _():
     print(asciikassi(2))
+    print(asciikassi(5))

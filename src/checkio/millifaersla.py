@@ -1,5 +1,11 @@
 """Resolution of https://open.kattis.com/problems/millifaersla"""
 
+import marimo
+
+app = marimo.App(width="medium")
+
+
+@app.function
 def millifaersla(a,b,c) :
     """Resolution of https://open.kattis.com/problems/millifaersla
 
@@ -23,3 +29,8 @@ def millifaersla(a,b,c) :
         msg = "Dolladollabilljoll"
 
     return msg
+
+@app.cell
+def _():
+    print(millifaersla(17,2,3))
+    print(millifaersla(14744,265548,22894))
