@@ -1,4 +1,4 @@
-from checkio.asciikassi import asciikassi
+from checkio import asciikassi
 
 def test_asciikassi() :
     assert asciikassi(0) == "++\n++"
