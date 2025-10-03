@@ -35,7 +35,7 @@ jobs:
         run: poetry install --no-interaction --no-root
 
       - run: |
-          poetry run pytest tests/
+          poetry run pytest tests src
           poetry run coverage run -m pytest
           poetry run coverage report -m
 
