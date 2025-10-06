@@ -6,6 +6,9 @@ authors = [
     {name = "alexandre.wallez",email = "alexandre.wallez.etu@univ-lille.fr"}
 ]
 readme = "README.md"
+dependencies = [
+    "pylint (>=3.3.8,<4.0.0)"
+]
 
 [tool.poetry]
 packages = [{include = "checkio", from = "src"}]
