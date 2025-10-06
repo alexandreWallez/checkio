@@ -1,4 +1,4 @@
-from checkio.thendaysofchristmas import thendaysofchristmas
+from src.checkio.thendaysofchristmas import thendaysofchristmas
 
 def test_thendaysofchristmas() :
     assert thendaysofchristmas(2) == (3,4)

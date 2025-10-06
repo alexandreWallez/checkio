@@ -1,4 +1,4 @@
-from checkio.filip import filip
+from src.checkio.filip import filip
 
 def test_filip() :
     assert filip("734", "893") == "437"

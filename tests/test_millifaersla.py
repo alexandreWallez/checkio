@@ -1,4 +1,4 @@
-from checkio.millifaersla import millifaersla
+from src.checkio.millifaersla import millifaersla
 
 def test_millifaersla() :
     assert millifaersla(3,9,7) == "Monnei"

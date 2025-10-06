@@ -1,4 +1,4 @@
-from checkio.shandy import shandy
+from src.checkio.shandy import shandy
 
 def test_shandy() :
     assert shandy(1,1) == 2

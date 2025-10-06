@@ -1,4 +1,4 @@
-from checkio.whichisgreater import whichisgreater
+from src.checkio.whichisgreater import whichisgreater
 
 def test_whichisgreater() :
     assert whichisgreater(1,19) == 0

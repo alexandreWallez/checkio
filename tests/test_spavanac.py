@@ -1,4 +1,4 @@
-from checkio.spavanac import spavanac
+from src.checkio.spavanac import spavanac
 
 def test_spavanac() :
     assert spavanac(10,10) == (9,25)
