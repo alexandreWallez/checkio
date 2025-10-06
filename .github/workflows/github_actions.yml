@@ -24,10 +24,18 @@ jobs:
           virtualenvs-in-project: true
           virtualenvs-path: .venv
           installer-parallel: true
+          
+      - id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
-      - run: poetry install --no-interaction --no-root
+      - if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true' 
+        run: poetry install --no-interaction --no-root
 
       - run: |
+          source .venv/bin/activate
           poetry run pytest tests src
           poetry run coverage run -m pytest
           poetry run coverage report -m
